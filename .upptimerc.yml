@@ -30,13 +30,6 @@ sites:
     __dangerous__body_down_if_text_missing: "flutter_bootstrap"
     maxResponseTime: 5000
 
-  # TEMPORARIO — teste de fumaça do caminho de alerta. Endpoint inexistente de
-  # proposito, para exercitar a transicao up->down (Issue + Telegram) sem
-  # esperar uma queda real. REMOVER depois do teste.
-  - name: Teste de alerta
-    url: https://concriz.com/api/health
-    maxResponseTime: 5000
-
 status-website:
   # Sem dominio proprio por enquanto: a pagina fica em qremmax.github.io/status.
   # Para migrar para status.concriz.com, trocar baseUrl por `cname` e criar o
