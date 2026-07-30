@@ -34,7 +34,7 @@ sites:
   # proposito, para exercitar a transicao up->down (Issue + Telegram) sem
   # esperar uma queda real. REMOVER depois do teste.
   - name: Teste de alerta
-    url: https://concriz.com/api/nao-existe
+    url: https://concriz.com/api/health
     maxResponseTime: 5000
 
 status-website:
