@@ -1,31 +1,115 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Monitoramento de uptime dos servicos Concriz
+# Docs: https://upptime.js.org/docs/configuration
+
+owner: qremmax
+repo: status
+
+# UA identificavel nos logs do servidor, para nao confundir com bot/scraper.
+user-agent: "Concriz-Status/1.0 (+https://github.com/qremmax/status)"
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # A API e o sinal mais confiavel de queda: e dinamica, entao a resposta vem
+  # sempre da origem (HostGator) e nao do cache do Cloudflare. Alem do 200,
+  # exigimos o corpo do health check — assim uma pagina de erro devolvida com
+  # 200 tambem conta como queda.
+  - name: API
+    url: https://concriz.com/api/health
+    __dangerous__body_down_if_text_missing: '"status":"ok"'
+    maxResponseTime: 5000
+
+  # Site institucional (pdv-site). Sem checagem de corpo de proposito: o titulo
+  # e os textos mudam por SEO, e isso viraria alarme falso.
+  - name: Site
+    url: https://concriz.com/
+    maxResponseTime: 5000
+
+  # Gestor Web (build Flutter). "flutter_bootstrap" e estavel entre releases e
+  # nao aparece em pagina de erro do Cloudflare.
+  - name: Gestor Web
+    url: https://concriz.com/web/
+    __dangerous__body_down_if_text_missing: "flutter_bootstrap"
+    maxResponseTime: 5000
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Sem dominio proprio por enquanto: a pagina fica em qremmax.github.io/status.
+  # Para migrar para status.concriz.com, trocar baseUrl por `cname` e criar o
+  # CNAME no Cloudflare apontando para qremmax.github.io.
+  baseUrl: /status
+  name: Status Concriz
+  introTitle: "Disponibilidade dos servicos Concriz"
+  introMessage: "Monitoramento automatico da API, do site e do Gestor Web, verificado a cada 5 minutos. O historico completo e publico neste [repositorio](https://github.com/qremmax/status)."
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Concriz
+      href: https://concriz.com
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Allowlist explicita de secrets (least privilege). Somente estes sao injetados
+# nos workflows gerados; GH_PAT e tratado separadamente pelo Upptime.
+secrets:
+  - NOTIFICATION_TELEGRAM
+  - NOTIFICATION_TELEGRAM_BOT_KEY
+  - NOTIFICATION_TELEGRAM_CHAT_ID
+
+i18n:
+  locale: pt-BR
+  activeIncidents: Incidentes ativos
+  allSystemsOperational: Todos os servicos estao operacionais
+  incidentReport: "Relatorio do incidente #$NUMBER →"
+  activeIncidentSummary: Aberto em $DATE com $POSTS atualizacoes
+  incidentTitle: Detalhes do incidente $NUMBER
+  incidentDetails: Detalhes do incidente
+  incidentFixed: Resolvido
+  incidentOngoing: Em andamento
+  incidentOpenedAt: Aberto em
+  incidentClosedAt: Fechado em
+  incidentViewOnGitHub: Ver e acompanhar no GitHub
+  incidentCommentSummary: Publicado em $DATE por $AUTHOR
+  incidentBack: ← Voltar para todos os incidentes
+  pastIncidents: Incidentes anteriores
+  pastIncidentsResolved: Resolvido em $MINUTES minutos com $POSTS atualizacoes
+  liveStatus: Status em tempo real
+  overallUptime: "Disponibilidade geral: $UPTIME"
+  overallUptimeTitle: Disponibilidade geral
+  averageResponseTime: "Tempo medio de resposta: $TIMEms"
+  averageResponseTimeTitle: Resposta media
+  sevelDayResponseTime: Tempo de resposta em 7 dias
+  responseTimeMs: Tempo de resposta (ms)
+  up: No ar
+  down: Fora do ar
+  degraded: Degradado
+  ms: ms
+  loading: Carregando
+  navGitHub: GitHub
+  footer: Esta pagina e [open source]($REPO), feita com [Upptime](https://upptime.js.org)
+  errorTitle: Ocorreu um erro
+  errorIntro: Ocorreu um erro ao buscar o status mais recente.
+  errorText: Tente novamente em alguns instantes.
+  errorHome: Ir para a pagina inicial
+  pastScheduledMaintenance: Manutencoes programadas anteriores
+  scheduledMaintenance: Manutencao programada
+  scheduledMaintenanceSummaryStarted: Iniciada em $DATE por $DURATION minutos
+  scheduledMaintenanceSummaryStarts: Inicia em $DATE por $DURATION minutos
+  startedAt: Iniciada em
+  startsAt: Inicia em
+  duration: Duracao
+  durationMin: $DURATION minutos
+  incidentCompleted: Concluida
+  incidentScheduled: Programada
+  duration24H: 24h
+  duration7D: 7d
+  duration30D: 30d
+  duration1Y: 1a
+  durationAll: tudo
+  rateLimitExceededTitle: Limite de requisicoes excedido
+  rateLimitExceededIntro: Voce excedeu o numero de requisicoes permitidas por hora e precisa aguardar para acessar esta pagina novamente. Como alternativa, adicione um Personal Access Token do GitHub para continuar usando o site.
+  rateLimitExceededWhatDoesErrorMean: O que significa este erro?
+  rateLimitExceededErrorMeaning: Esta pagina usa a API do GitHub para obter dados em tempo real do status dos servicos. Por padrao, o GitHub permite 60 requisicoes por hora para cada endereco IP, e esse limite foi atingido.
+  rateLimitExceededErrorHowCanFix: Como resolver?
+  rateLimitExceededErrorFix: Basta aguardar uma hora para o limite do seu IP ser restaurado. Como alternativa, adicione seu Personal Access Token do GitHub, que libera mais 5.000 requisicoes por hora.
+  rateLimitExceededGeneratePAT: Saiba como gerar um Personal Access Token
+  rateLimitExceededHasSet: Voce ja tem um personal access token configurado.
+  rateLimitExceededRemoveToken: Remover token
+  rateLimitExceededGitHubPAT: Personal Access Token do GitHub
+  rateLimitExceededCopyPastePAT: Copie e cole seu token
+  rateLimitExceededSaveToken: Salvar token
