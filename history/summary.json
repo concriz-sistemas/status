@@ -52,25 +52,5 @@
     "timeMonth": 383,
     "timeYear": 383,
     "dailyMinutesDown": {}
-  },
-  {
-    "name": "Teste de alerta",
-    "url": "https://concriz.com/api/health",
-    "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
-    "slug": "teste-de-alerta",
-    "status": "up",
-    "uptime": "19.74%",
-    "uptimeDay": "19.74%",
-    "uptimeWeek": "19.74%",
-    "uptimeMonth": "19.74%",
-    "uptimeYear": "19.74%",
-    "time": 454,
-    "timeDay": 454,
-    "timeWeek": 454,
-    "timeMonth": 454,
-    "timeYear": 454,
-    "dailyMinutesDown": {
-      "2026-07-30": 1
-    }
   }
 ]
