@@ -4,18 +4,20 @@
     "url": "https://concriz.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
     "slug": "api",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 5503,
-    "timeDay": 22844,
-    "timeWeek": 5503,
-    "timeMonth": 5503,
-    "timeYear": 5503,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "98.13%",
+    "uptimeDay": "88.72%",
+    "uptimeWeek": "98.13%",
+    "uptimeMonth": "98.13%",
+    "uptimeYear": "98.13%",
+    "time": 5020,
+    "timeDay": 15452,
+    "timeWeek": 5020,
+    "timeMonth": 5020,
+    "timeYear": 5020,
+    "dailyMinutesDown": {
+      "2026-08-05": 162
+    }
   },
   {
     "name": "Site",
