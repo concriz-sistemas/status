@@ -5,16 +5,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
     "slug": "api",
     "status": "up",
-    "uptime": "99.04%",
+    "uptime": "99.11%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "98.39%",
-    "uptimeMonth": "99.04%",
-    "uptimeYear": "99.04%",
-    "time": 3359,
-    "timeDay": 601,
-    "timeWeek": 5544,
-    "timeMonth": 3359,
-    "timeYear": 3359,
+    "uptimeMonth": "99.11%",
+    "uptimeYear": "99.11%",
+    "time": 3201,
+    "timeDay": 676,
+    "timeWeek": 5547,
+    "timeMonth": 3201,
+    "timeYear": 3201,
     "dailyMinutesDown": {
       "2026-08-05": 162
     }
@@ -30,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 604,
-    "timeDay": 338,
-    "timeWeek": 603,
-    "timeMonth": 604,
-    "timeYear": 604,
+    "time": 616,
+    "timeDay": 787,
+    "timeWeek": 663,
+    "timeMonth": 616,
+    "timeYear": 616,
     "dailyMinutesDown": {}
   },
   {
@@ -48,11 +48,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 467,
-    "timeDay": 488,
-    "timeWeek": 518,
-    "timeMonth": 467,
-    "timeYear": 467,
+    "time": 473,
+    "timeDay": 565,
+    "timeWeek": 530,
+    "timeMonth": 473,
+    "timeYear": 473,
     "dailyMinutesDown": {}
   }
 ]
