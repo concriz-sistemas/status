@@ -4,20 +4,20 @@
     "url": "https://concriz.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
     "slug": "api",
-    "status": "down",
-    "uptime": "99.15%",
-    "uptimeDay": "99.89%",
-    "uptimeWeek": "99.98%",
-    "uptimeMonth": "99.15%",
-    "uptimeYear": "99.15%",
-    "time": 3181,
-    "timeDay": 1764,
-    "timeWeek": 883,
-    "timeMonth": 3181,
-    "timeYear": 3181,
+    "status": "up",
+    "uptime": "98.67%",
+    "uptimeDay": "93.26%",
+    "uptimeWeek": "99.04%",
+    "uptimeMonth": "98.67%",
+    "uptimeYear": "98.67%",
+    "time": 3051,
+    "timeDay": 1409,
+    "timeWeek": 863,
+    "timeMonth": 3051,
+    "timeYear": 3051,
     "dailyMinutesDown": {
       "2026-08-05": 162,
-      "2026-08-12": 2
+      "2026-08-12": 97
     }
   },
   {
@@ -25,19 +25,19 @@
     "url": "https://concriz.com/",
     "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
     "slug": "site",
-    "status": "down",
-    "uptime": "99.99%",
-    "uptimeDay": "99.92%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.99%",
-    "time": 619,
-    "timeDay": 727,
-    "timeWeek": 664,
-    "timeMonth": 619,
-    "timeYear": 619,
+    "status": "up",
+    "uptime": "99.50%",
+    "uptimeDay": "93.29%",
+    "uptimeWeek": "99.04%",
+    "uptimeMonth": "99.50%",
+    "uptimeYear": "99.50%",
+    "time": 629,
+    "timeDay": 748,
+    "timeWeek": 678,
+    "timeMonth": 629,
+    "timeYear": 629,
     "dailyMinutesDown": {
-      "2026-08-12": 1
+      "2026-08-12": 97
     }
   },
   {
@@ -45,17 +45,19 @@
     "url": "https://concriz.com/web/",
     "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
     "slug": "gestor-web",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 3226,
-    "timeDay": 22542,
-    "timeWeek": 6028,
-    "timeMonth": 3226,
-    "timeYear": 3226,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "99.51%",
+    "uptimeDay": "93.36%",
+    "uptimeWeek": "99.05%",
+    "uptimeMonth": "99.51%",
+    "uptimeYear": "99.51%",
+    "time": 3081,
+    "timeDay": 15279,
+    "timeWeek": 5442,
+    "timeMonth": 3081,
+    "timeYear": 3081,
+    "dailyMinutesDown": {
+      "2026-08-12": 96
+    }
   }
 ]
