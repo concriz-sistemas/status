@@ -1,7 +1,7 @@
 url: https://concriz.com/api/health
-status: up
-code: 200
-responseTime: 456
-lastUpdated: 2026-08-12T23:33:14.037Z
+status: down
+code: 429
+responseTime: 857
+lastUpdated: 2026-08-13T15:15:52.993Z
 startTime: 2026-07-30T09:09:03.192Z
 generator: Upptime <https://github.com/upptime/upptime>
