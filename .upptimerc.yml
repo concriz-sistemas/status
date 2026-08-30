@@ -1,11 +1,11 @@
 # Monitoramento de uptime dos servicos Concriz
 # Docs: https://upptime.js.org/docs/configuration
 
-owner: qremmax
+owner: concriz-sistemas
 repo: status
 
 # UA identificavel nos logs do servidor, para nao confundir com bot/scraper.
-user-agent: "Concriz-Status/1.0 (+https://github.com/qremmax/status)"
+user-agent: "Concriz-Status/1.0 (+https://github.com/concriz-sistemas/status)"
 
 sites:
   # A API e o sinal mais confiavel de queda: e dinamica, entao a resposta vem
@@ -31,13 +31,13 @@ sites:
     maxResponseTime: 5000
 
 status-website:
-  # Sem dominio proprio por enquanto: a pagina fica em qremmax.github.io/status.
+  # Sem dominio proprio por enquanto: a pagina fica em concriz-sistemas.github.io/status.
   # Para migrar para status.concriz.com, trocar baseUrl por `cname` e criar o
-  # CNAME no Cloudflare apontando para qremmax.github.io.
+  # CNAME no Cloudflare apontando para concriz-sistemas.github.io.
   baseUrl: /status
   name: Status Concriz
   introTitle: "Disponibilidade dos servicos Concriz"
-  introMessage: "Monitoramento automatico da API, do site e do Gestor Web, verificado a cada 5 minutos. O historico completo e publico neste [repositorio](https://github.com/qremmax/status)."
+  introMessage: "Monitoramento automatico da API, do site e do Gestor Web, verificado a cada 5 minutos. O historico completo e publico neste [repositorio](https://github.com/concriz-sistemas/status)."
   navbar:
     - title: Status
       href: /
