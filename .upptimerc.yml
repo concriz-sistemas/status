@@ -33,7 +33,7 @@ sites:
   # TEMPORARIO — teste do caminho de alerta (12/11/2026). Endpoint inexistente
   # de proposito, para exercitar up->down (Issue + Telegram). REMOVER depois.
   - name: Teste de alerta
-    url: https://concriz.com/api/nao-existe
+    url: https://concriz.com/api/health
     maxResponseTime: 5000
 
 status-website:
