@@ -67,22 +67,22 @@
   },
   {
     "name": "Teste de alerta",
-    "url": "https://concriz.com/api/nao-existe",
+    "url": "https://concriz.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/concriz.com.ico",
     "slug": "teste-de-alerta",
-    "status": "down",
-    "uptime": "44.48%",
-    "uptimeDay": "44.48%",
-    "uptimeWeek": "44.48%",
-    "uptimeMonth": "44.48%",
-    "uptimeYear": "44.48%",
-    "time": 383,
-    "timeDay": 242,
-    "timeWeek": 242,
-    "timeMonth": 242,
-    "timeYear": 383,
+    "status": "up",
+    "uptime": "10.57%",
+    "uptimeDay": "10.57%",
+    "uptimeWeek": "10.57%",
+    "uptimeMonth": "10.57%",
+    "uptimeYear": "10.57%",
+    "time": 454,
+    "timeDay": 455,
+    "timeWeek": 455,
+    "timeMonth": 455,
+    "timeYear": 454,
     "dailyMinutesDown": {
-      "2026-11-12": 0
+      "2026-11-12": 3
     }
   }
 ]
