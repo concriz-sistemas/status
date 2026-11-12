@@ -1,7 +1,7 @@
-url: https://concriz.com/api/nao-existe
-status: down
-code: 404
-responseTime: 242
-lastUpdated: 2026-11-12T09:25:30.497Z
+url: https://concriz.com/api/health
+status: up
+code: 200
+responseTime: 667
+lastUpdated: 2026-11-12T09:28:10.161Z
 startTime: 2026-11-12T09:25:17.458Z
 generator: Upptime <https://github.com/upptime/upptime>
